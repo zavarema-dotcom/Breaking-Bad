@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.jpg" type="image/x-icon">
+<body>
+    <header>
+    <nav>
+        <div class="div_logo"><h1 class="q1">Во все тяжки</h1> 
+        <img class="logo" src="logo.jpg"></div>
+        <div class="nav-btn"><a href="index.html">Главная</a></div> 
+       <div class="nav-btn"><a href="serial.html">О сериале</a></div>
+       <div class="nav-btn"> <a href="hist.html">История</a></div>
+        <div class="nav-btn"><a href="char.html">Персонажи</a></div>
+    </nav>
+   </header> 
+    <div class="kont">
+   <table class="table">
+    <thead>
+    <tr>
+        <th>Актер</th>
+        <th>Персонаж</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Брайан Крэнстон</th>
+        <th>Уолтер Уайт</th>
+    </tr>
+    <tr>
+    <th>Анна Ганн</th>
+    <th>Скайлер Уайт</th>
+    </tr>
+    <tr>
+    <th>Аарон Пол</th>
+    <th>Джесси Пинкман</th>
+    </tr>
+    <tr>
+    <th>Дин Норрис</th>
+    <th>Хенк Шрайдер</th>
+    </tr>
+    <tr>
+    <th>Бетси Брандт</th>
+    <th>Мари Шрейдер</th>
+    </tr>
+    <tr>
+    <th>Ар Джей Митт</th>
+    <th>Уолтер младший</th>
+    </tr>
+    <tr>
+    <th>Джанкарло Эспозито</th>
+    <th>Густаво Фринг</th>
+    </tr>
+    <tr>
+    <th>Боб Оденкерк</th>
+    <th>Соул Гудман</th>
+    </tr>
+    <tr>
+    <th>Джонатан Бэнкс</th>
+    <th>Майк Эрмантраут</th>
+    </tr>
+    <tr>
+    <th>Лора Фрейзер</th>
+    <th>Лидия Родарт-Куэйл</th>
+    </tr>
+    <tr>
+    <th>Джесси Племонс</th>
+    <th>Тодд Алкист</th>
+    </tr>
+    </tbody>
+</table>
+<div class="kont-right">
+    <button onClick="selectChar()">кто вы из вселеной во все тяжки</button>
+    <p id="result"></p>
+    <img id="charImg" class="jh">
+    </div>
+    </div>
+    
+</body>
+<script>
+   let characters = [
+    {
+        name: "Уолтер Уайт",
+        image: "jopa.jpg"
+    },
+    {
+        name: "Джесси Пинкман", 
+        image: "jes.jpg"
+    },
+    {
+        name: "Скайлер Уайт",
+        image: "scayler.jpg"
+    },
+    {
+        name: "Соул Гудман",
+        image: "soul.jpg"
+    },
+    {
+        name: "Туко",
+        image: "Tuco.jpg"    
+    },
+    {
+        name: "Майк Эрмантраут",
+        image: "mike.jpg"
+    },
+    {
+        name: "Уолт младший",
+        image: "walter.jpg"
+    },
+    {
+        name: "Хэнк Шредер",
+        image: "hank.jpg"
+    },
+    {
+        name: "Густаво Фринг",
+        image: "guss.jpg"
+    }
+    ]
+
+    function selectChar() {
+        let choice = characters[Math.floor(Math.random() * characters.length)];
+        document.getElementById("result").innerText = "Ты "+ choice.name;
+
+        let imgEl =document.getElementById("charImg");
+        imgEl.src = choice.image;
+
+    }
+    
+
+</script>
+</html>
